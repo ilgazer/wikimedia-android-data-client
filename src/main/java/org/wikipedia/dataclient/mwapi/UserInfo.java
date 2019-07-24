@@ -8,7 +8,9 @@ import java.util.Map;
 
 @SuppressWarnings("unused")
 public class UserInfo {
+    @NonNull
     private String name;
+    @NonNull
     private int id;
 
     //Block information
@@ -42,27 +44,41 @@ public class UserInfo {
         return map;
     }
 
+    @NonNull
     public int blockid() {
         return blockid;
     }
 
+    @NonNull
     public String blockedby() {
-        return blockedby;
+        if (blockedby != null)
+            return blockedby;
+        else return "";
     }
 
+    @NonNull
     public int blockedbyid() {
         return blockedbyid;
     }
 
+    @NonNull
     public String blockreason() {
-        return blockreason;
+        if (blockreason != null)
+            return blockreason;
+        else return "";
     }
 
+    @NonNull
     public String blocktimestamp() {
-        return blocktimestamp;
+        if (blocktimestamp != null)
+            return blocktimestamp;
+        else return "";
     }
 
+    @NonNull
     public String blockexpiry() {
-        return blockexpiry;
+        if (blockexpiry != null)
+            return blockexpiry;
+        else return "";
     }
 }
